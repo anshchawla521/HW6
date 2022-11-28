@@ -28,10 +28,10 @@ public class Calculator
         System.out.println("enter Number1");
         Scanner obj = new Scanner(System.in);
         String str = obj.nextLine();
-        num1 = Integer.parseInt(str);
+        num1 = Integer.parseInt(str); // throws number format exception if int not found
         System.out.println("enter Number2");
         str = obj.nextLine();
-        num2 = Integer.parseInt(str);
+        num2 = Integer.parseInt(str); // throws number format exception if int not found
         
     }
     public int addition() {  
