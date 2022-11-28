@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 import javax.smartcardio.ATR;
 
-public class q1 {
+public class q2 {
     public static void main(String args[])
     {
         Scanner obj = new Scanner(System.in);
@@ -10,15 +10,15 @@ public class q1 {
         int a = obj.nextInt();
         System.out.println("enter second number");
         int b = obj.nextInt();
-        System.out.println("enter 1 for multiplication and 2 for division");
+        System.out.println("enter 1 for add and 2 for subtract");
         int c = obj.nextInt();
         try{
         if (c == 1)
         {
-            number.multiply(a, b);
+            number.Add(a, b);
         }else if (c ==2)
         {
-            number.Divison(a, b);
+            number.subtract(a, b);
         }
         }catch (Exception ArithmeticException)
         {
@@ -30,21 +30,21 @@ public class q1 {
 
 public class number
 {
-    static float Divison(int a , int b)
+    static int Add(int a , int b)
     {
-        if( a == 0 || b == 0)
+        if( a < 0 || b < 0)
         {
-            throw new ArithmeticException("0/0 ");
+            throw new ArithmeticException("");
         }
-        return (float)a/b;
+        return a+b;
     }
 
-    static float multiply(int a , int b)
+    static int subtract(int a , int b)
     {
-        if( a == 0 || b == 0)
+        if( a < 0 || b < 0)
         {
-            throw new ArithmeticException("0*0");
+            throw new ArithmeticException("");
         }
-        return (float)a*b;
+        return a-b;
     }
 }
