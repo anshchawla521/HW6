@@ -20,7 +20,7 @@ public class q2 {
         {
             number.subtract(a, b);
         }
-        }catch (Exception ArithmeticException)
+        }catch (ArithmeticException e)
         {
             System.out.println("exception handeled");
         }

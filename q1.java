@@ -20,7 +20,7 @@ public class q1 {
         {
             number.Divison(a, b);
         }
-        }catch (Exception ArithmeticException)
+        }catch (ArithmeticException e)
         {
             System.out.println("exception handeled");
         }
